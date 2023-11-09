@@ -1,0 +1,54 @@
+/* PetDetails.module.css
+
+.petDetails {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+  }
+  
+  .petImageContainer {
+    flex: 1;
+  }
+  
+  .petImage {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .petInfo {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .petName {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .petDescription {
+    margin-bottom: 20px;
+  }
+  
+  .petDetailsInfo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .petDetail {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .adoptButton {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+   */
