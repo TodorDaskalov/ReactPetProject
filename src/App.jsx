@@ -1,7 +1,8 @@
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-// import PetDetails from "./components/PetDetails";
+import PetDetails from "./components/PetDetails";
 import PetsList from "./components/PetsList";
+import WeatherComponent from "./components/WeatherComponent";
 
 function App() {
     return (
@@ -121,8 +122,11 @@ function App() {
                     </div>
                 </div>
             </div> */}
-            <PetsList />
-            {/* <PetDetails /> */}
+            {/* <PetsList /> */}
+            <PetDetails />
+            <WeatherComponent />
+            
+            {/* <WeatherComponent /> */}
             {/* <div className="content page1">
                 <div className="container_12">
                     <div className="grid_12">
