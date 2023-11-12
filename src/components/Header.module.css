@@ -1,0 +1,38 @@
+.headerContainer {
+    background-color: rgba(0, 143, 45, 0.882);
+    margin-top: -20px;
+}
+
+.header {
+    font-size: 52px;
+    margin: 20px;
+    color: white;
+}
+
+.navElement {
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+}
+
+.ulElement {
+    list-style: none;
+    padding: 0;
+    margin: 20px;
+}
+
+.liElement {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 20px;
+    transition: color 0.4s;
+    text-decoration: none;
+    color: white;
+}
+
+.liElement:hover {
+    cursor: pointer;
+    color: rgb(198, 233, 0);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
