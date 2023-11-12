@@ -1,0 +1,20 @@
+.heroPageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-image: url("../../public/Blog-Pet-Care-Tips_6c0c164bd2b597ee32b68b8b5755bd2e.png");
+    background-size: cover;
+    height: 100vh;
+}
+
+.leftSide {
+    padding: 50px;
+    max-width: 60%;
+}
+
+.rightSide {
+    padding: 30px;
+    margin-top: -50px;
+}
+
+
