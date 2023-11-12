@@ -1,7 +1,7 @@
 import styles from "./HeroPage.module.css";
 import WeatherComponent from "./WeatherComponent";
 
-export default function heroPage() {
+export default function HeroPage() {
     return (
         <div className={styles.heroPageContainer}>
             <div className={styles.leftSide}>
