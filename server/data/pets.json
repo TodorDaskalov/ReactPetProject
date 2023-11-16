@@ -1,0 +1,79 @@
+{
+    "07f260f4-466c-4607-9a33-f7273b24f2b5": {
+        "_id": "07f260f4-466c-4607-9a33-f7273b24f2b5",
+        "name": "Buddy",
+        "breed": "labrador",
+        "imageUrl": "https://www.vidavetcare.com/wp-content/uploads/sites/234/2022/04/labrador-retriever-dog-breed-info.jpeg",
+        "age": 2
+    },
+    "07f260f4-466c-4607-9a33-f7273b23f2b5": {
+        "_id": "07f260f4-466c-4607-9a33-f7273b23f2b5",
+        "name": "Sharo",
+        "breed": "Street magnificent",
+        "imageUrl": "https://img.freepik.com/premium-photo/happy-street-dog-with-head-tilted-right_297978-9.jpg",
+        "age": 2
+    },
+    "07f260f4-466c-4607-9a33-f7273b21f2b5": {
+        "_id": "07f260f4-466c-4607-9a33-f7273b21f2b5",
+        "name": "Maro",
+        "breed": "Street magnificent",
+        "imageUrl": "https://img.freepik.com/free-photo/isolated-happy-smiling-dog-white-background-portrait-4_1562-693.jpg",
+        "age": 2
+    },
+    "07f260f4-466c-4607-9a33-f7273b22f2b5": {
+        "_id": "07f260f4-466c-4607-9a33-f7273b22f2b5",
+        "name": "Karo",
+        "breed": "Street magnificent",
+        "imageUrl": "https://www.thesprucepets.com/thmb/HAXua0m1oC4ahFBDLc8k0j9y0YQ=/3300x0/filters:no_upscale():strip_icc()/fluffiest-dogs-ever-4589343-hero-939e88f02bae4cfdb557bb7c15ee5384.jpg",
+        "age": 2
+    },
+    "07f260f4-466c-4607-9a33-f7273b29f2b5": {
+        "_id": "07f260f4-466c-4607-9a33-f7273b29f2b5",
+        "name": "Paro",
+        "breed": "Street magnificent",
+        "imageUrl": "https://cdn.mos.cms.futurecdn.net/ASHH5bDmsp6wnK6mEfZdcU.jpg",
+        "age": 2
+    },
+    "07f260f4-466c-4607-9a33-f7273b13f2b5": {
+        "_id": "07f260f4-466c-4607-9a33-f7273b13f2b5",
+        "name": "Taro",
+        "breed": "Street magnificent",
+        "imageUrl": "https://hips.hearstapps.com/hmg-prod/images/best-guard-dogs-1650302456.jpeg?crop=0.754xw:1.00xh;0.0651xw,0&resize=1200:*",
+        "age": 2
+    },
+    "07f260f4-466c-4607-9a33-f7273b12f2b5": {
+        "_id": "07f260f4-466c-4607-9a33-f7273b12f2b5",
+        "name": "Raro",
+        "breed": "Street magnificent",
+        "imageUrl": "https://www.purina.co.uk/sites/default/files/2020-12/Dog_1098119012_Teaser.jpg",
+        "age": 2
+    },
+    "07f260f4-466c-4607-9a33-f7273b17f2b5": {
+        "_id": "07f260f4-466c-4607-9a33-f7273b17f2b5",
+        "name": "Laro",
+        "breed": "Street magnificent",
+        "imageUrl": "https://images.pexels.com/photos/2607544/pexels-photo-2607544.jpeg?cs=srgb&dl=pexels-simona-kidri%C4%8D-2607544.jpg&fm=jpg",
+        "age": 2
+    },
+    "07f260f4-466c-4607-9a33-f7273b33f2b5": {
+        "_id": "07f260f4-466c-4607-9a33-f7273b33f2b5",
+        "name": "Sharo",
+        "breed": "Street magnificent",
+        "imageUrl": "https://img.freepik.com/premium-photo/happy-street-dog-with-head-tilted-right_297978-9.jpg",
+        "age": 2
+    },
+    "07f260f4-466c-4607-9a33-f7273b77f2b5": {
+        "_id": "07f260f4-466c-4607-9a33-f7273b77f2b5",
+        "name": "Jaro",
+        "breed": "Street magnificent",
+        "imageUrl": "https://cdn.britannica.com/72/234472-050-735B6214/maltese-dog.jpg",
+        "age": 2
+    },
+    "07f260f4-466c-4607-9a33-f7273b99f2b5": {
+        "_id": "07f260f4-466c-4607-9a33-f7273b99f2b5",
+        "name": "Baro",
+        "breed": "Street magnificent",
+        "imageUrl": "https://hips.hearstapps.com/hmg-prod/images/wolf-dog-breeds-siberian-husky-1570411330.jpg?crop=1xw:0.84375xh;center,top",
+        "age": 2
+    }
+}

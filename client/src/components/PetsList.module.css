@@ -1,0 +1,10 @@
+.blockHeading {
+    text-align: center;
+    font-size: 56px;
+}
+
+.petsListCardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
