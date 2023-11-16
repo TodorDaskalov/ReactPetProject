@@ -1,17 +1,32 @@
-import styles from "./PetDetails.module.css"; // Import the CSS module
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import styles from "./PetDetails.module.css";
+import { getPetDetails } from "../../services/petService";
 
 export default function PetDetails() {
+    
+    const { petId } = useParams();
+
+    const [pet, setPet] = useState({});
+
+    useEffect(() => {
+        getPetDetails(petId)
+        .then(setPet)
+    }, [petId])
+
+    console.log(pet)
+
     return (
         <div className={styles.petDetails}>
             <div className={styles.petImageContainer}>
                 <img
-                    src="../../public/dog-puppy-on-garden-royalty-free-image-1586966191.jpg"
+                    src={pet.imageUrl}
                     alt="Pet"
                     className={styles.petImage}
                 />
             </div>
             <div className={styles.petInfo}>
-                <h1 className={styles.petName}>Pet Name</h1>
+                <h1 className={styles.petName}>{pet.name}</h1>
                 <p className={styles.petDescription}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
                     do eiusmod tempor incididunt ut labore et dolore magna
@@ -19,10 +34,10 @@ export default function PetDetails() {
                 </p>
                 <div className={styles.petDetailsInfo}>
                     <div className={styles.petDetail}>
-                        <strong>Age:</strong> 2 years
+                        <strong>Age:</strong> {pet.age} years
                     </div>
                     <div className={styles.petDetail}>
-                        <strong>Breed:</strong> Golden Retriever
+                        <strong>Breed:</strong> {pet.breed}
                     </div>
                     {/* Add more details as needed */}
                 </div>

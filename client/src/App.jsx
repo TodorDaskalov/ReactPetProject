@@ -10,17 +10,15 @@ function App() {
     return (
         <>
             <Header />
-            {/* <HeroPage /> */}
+
             <Routes>
                 <Route path="/" element={<HeroPage />} />
                 <Route path="/pets" element={<PetsList />} />
+                <Route path="/pets/:petId" element={<PetDetails/>} />
                 <Route path="/details" element={<PetDetails />} />
                 <Route path="/tips" element={<TipsAndQuestions />} />
             </Routes>
 
-            {/* <PetsList /> */}
-            {/* <PetDetails /> */}
-            {/* <TipsAndQuestions /> */}
             <Footer />
         </>
     );

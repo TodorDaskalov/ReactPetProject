@@ -1,13 +1,8 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import { Link } from "react-router-dom";
 
-export default function PetCard({
-    _id,
-    name,
-    breed,
-    imageUrl,
-    age,
-}) {
+export default function PetCard({ _id, name, breed, imageUrl, age }) {
     return (
         <Card style={{ width: "18rem", margin: "10px 0px" }}>
             <Card.Img variant="top" src={imageUrl} />
@@ -19,7 +14,9 @@ export default function PetCard({
                     {/* <li>{birth_year}</li> */}
                     {/* <li>{gender}</li> */}
                 </Card.Text>
-                <Button variant="primary">Details</Button>
+                <Link to={_id }>
+                    <Button variant="primary">Details</Button>
+                </Link>
             </Card.Body>
         </Card>
     );
