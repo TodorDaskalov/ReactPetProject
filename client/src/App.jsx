@@ -1,6 +1,7 @@
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import PetDetails from "./components/PetDetails";
+import CreatePet from "./components/CreatePet";
 import PetsList from "./components/PetsList";
 import HeroPage from "./components/HeroPage";
 import TipsAndQuestions from "./components/TipsAndQuestions";
@@ -13,6 +14,7 @@ function App() {
 
             <Routes>
                 <Route path="/" element={<HeroPage />} />
+                <Route path="add-pet" element={<CreatePet />} />
                 <Route path="/pets" element={<PetsList />} />
                 <Route path="/pets/:petId" element={<PetDetails/>} />
                 <Route path="/details" element={<PetDetails />} />
