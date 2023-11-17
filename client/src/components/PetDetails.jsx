@@ -39,7 +39,6 @@ export default function PetDetails() {
                     <div className={styles.petDetail}>
                         <strong>Breed:</strong> {pet.breed}
                     </div>
-                    {/* Add more details as needed */}
                 </div>
                 <button className={styles.adoptButton}>Adopt Me</button>
             </div>
