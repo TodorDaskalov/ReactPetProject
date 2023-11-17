@@ -14,8 +14,6 @@ export default function PetDetails() {
         .then(setPet)
     }, [petId])
 
-    console.log(pet)
-
     return (
         <div className={styles.petDetails}>
             <div className={styles.petImageContainer}>
