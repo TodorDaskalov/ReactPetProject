@@ -17,6 +17,12 @@ export default function PetCard({ _id, name, breed, imageUrl, age }) {
                 <Link to={_id }>
                     <Button variant="primary">Details</Button>
                 </Link>
+                <Link to={""}>
+                    <Button variant="primary">Edit</Button>
+                </Link>
+                <Link to={""}>
+                    <Button variant="danger">Delete</Button>
+                </Link>
             </Card.Body>
         </Card>
     );
