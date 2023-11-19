@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./CreatePet.module.css";
 
 export default function CreatePet() {
@@ -10,6 +11,7 @@ export default function CreatePet() {
     });
 
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const navigate = useNavigate();
 
     const inputChangeHandler = (e) => {
         setPetForm({
@@ -50,6 +52,8 @@ export default function CreatePet() {
         } finally {
             setIsSubmitting(false);
         }
+
+        navigate("/pets");
     };
 
     return (
