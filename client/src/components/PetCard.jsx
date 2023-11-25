@@ -1,7 +1,6 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
-import { deletePet } from "../../services/petService";
 
 export default function PetCard({ _id, name, breed, imageUrl, age, onDelete }) {
 
