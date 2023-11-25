@@ -1,8 +1,14 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
+import { deletePet } from "../../services/petService";
 
-export default function PetCard({ _id, name, breed, imageUrl, age }) {
+export default function PetCard({ _id, name, breed, imageUrl, age, onDelete }) {
+
+    const onClickDeleteHandler = () => {
+        onDelete(_id);
+    }
+
     return (
         <Card style={{ width: "18rem", margin: "10px 0px" }}>
             <Card.Img variant="top" src={imageUrl} />
@@ -14,15 +20,13 @@ export default function PetCard({ _id, name, breed, imageUrl, age }) {
                     {/* <li>{birth_year}</li> */}
                     {/* <li>{gender}</li> */}
                 </Card.Text>
-                <Link to={_id }>
+                <Link to={_id}>
                     <Button variant="primary">Details</Button>
                 </Link>
                 <Link to={""}>
                     <Button variant="primary">Edit</Button>
                 </Link>
-                <Link to={""}>
-                    <Button variant="danger">Delete</Button>
-                </Link>
+                <Button variant="danger" onClick={onClickDeleteHandler}>Delete</Button>
             </Card.Body>
         </Card>
     );
