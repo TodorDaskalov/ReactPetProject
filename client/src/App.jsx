@@ -14,6 +14,7 @@ import PetsList from "./components/PetsList";
 import HeroPage from "./components/HeroPage";
 import TipsAndQuestions from "./components/TipsAndQuestions";
 import LoginPage from "./components/LoginPage";
+import RegisterPage from "./components/RegisterPage";
 
 function App() {
     const navigate = useNavigate();
@@ -24,11 +25,20 @@ function App() {
 
         setAuth(result);
 
-        navigate(Path.Home)
+        navigate(Path.Home);
     };
+
+    const registerSubmitHandler = async (email, password, confirmPassword) => {
+        const result = await authService.register(email, password)
+
+        setAuth(result);
+
+        navigate(Path.Home);
+    }
 
     const values = {
         loginSubmitHandler,
+        registerSubmitHandler,
         username: auth.username,
         email: auth.email,
         isAuthenticated: !!auth.email,
@@ -41,11 +51,14 @@ function App() {
 
                 <Routes>
                     <Route path={Path.Home} element={<HeroPage />} />
-                    <Route path="add-pet" element={<CreatePet />} />
-                    <Route path="/pets" element={<PetsList />} />
-                    <Route path="/pets/:petId" element={<PetDetails />} />
-                    <Route path="/tips" element={<TipsAndQuestions />} />
-                    <Route path="/login" element={<LoginPage />} />
+                    <Route path={Path.CreatePet} element={<CreatePet />} />
+                    <Route path={Path.PetsList} element={<PetsList />} />
+                    <Route path={Path.PetDetails} element={<PetDetails />} />
+                    <Route path={Path.Tips} element={<TipsAndQuestions />} />
+                    <Route path={Path.Login} element={<LoginPage />} />
+                    <Route path={Path.Logout} element={<LoginPage />} />
+                    <Route path={Path.Register} element={<RegisterPage />} />
+
                 </Routes>
 
                 <Footer />
