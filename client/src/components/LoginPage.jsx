@@ -1,13 +1,14 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import styles from "./LoginPage.module.css";
+import AuthContext from "../contexts/AuthContext";
 
 const LoginPage = () => {
+  const {loginSubmitHandler} = useContext(AuthContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleLogin = () => {
-    // Implement your login logic here
-    console.log("Login clicked");
+    loginSubmitHandler(email, password)
   };
 
   return (
