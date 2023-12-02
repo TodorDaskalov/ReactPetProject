@@ -6,7 +6,7 @@ export default function PetCard({ _id, name, breed, imageUrl, age, onDelete }) {
 
     const onClickDeleteHandler = () => {
         onDelete(_id);
-    }
+    };
 
     return (
         <Card style={{ width: "18rem", margin: "10px 0px" }}>
@@ -29,4 +29,4 @@ export default function PetCard({ _id, name, breed, imageUrl, age, onDelete }) {
             </Card.Body>
         </Card>
     );
-}
+};
