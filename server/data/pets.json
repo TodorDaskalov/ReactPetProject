@@ -69,6 +69,13 @@
         "imageUrl": "https://media.npr.org/assets/img/2022/11/23/russian-toy-2-3-_custom-fd300880a9643efca73031d33f38ca7f4054b710.jpg",
         "age": 3
     },
+    "07f260f4-466c-4607-9a33-s7273b33f2b5": {
+        "_id": "07f260f4-466c-4607-9a33-s7273b33f2b5",
+        "name": "Poparo's girl",
+        "breed": "Cool magnificent",
+        "imageUrl": "https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA3L3Jhd3BpeGVsX29mZmljZV82X2FfcG9vZGxlXzYzZWU0M2Q3LWU0OGItNDYwMC05OGVkLWIyNTEzNDYzZWQwOS5qcGc.jpg",
+        "age": 2
+    },    
     "07f260f4-466c-4607-9a33-f7273b77f2b5": {
         "_id": "07f260f4-466c-4607-9a33-f7273b77f2b5",
         "name": "Jaro",
