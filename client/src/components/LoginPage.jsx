@@ -7,14 +7,15 @@ const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLogin = () => {
+  const handleLogin = (e) => {
+    e.preventDefault();
     loginSubmitHandler(email, password)
   };
 
   return (
     <div className={styles.loginContainer}>
       <h2 className={styles.loginTitle}>Login</h2>
-      <form className={styles.loginForm}>
+      <form className={styles.loginForm} onSubmit={handleLogin}>
         <label className={styles.label}>
           Email:
           <input
@@ -35,7 +36,7 @@ const LoginPage = () => {
             autoComplete="current-password"
           />
         </label>
-        <button type="button" onClick={handleLogin} className={styles.loginButton}>
+        <button type="submit" className={styles.loginButton}>
           Login
         </button>
       </form>
