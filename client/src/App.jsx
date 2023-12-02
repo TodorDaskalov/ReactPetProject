@@ -4,6 +4,7 @@ import { useState } from "react";
 
 import * as authService from "../services/authService";
 import AuthContext from "./contexts/AuthContext";
+import Path from "./appPaths"
 
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -23,20 +24,26 @@ function App() {
 
         setAuth(result);
 
-        navigate('/')
+        navigate(Path.Home)
     };
 
+    const values = {
+        loginSubmitHandler,
+        username: auth.username,
+        email: auth.email,
+        isAuthenticated: !!auth.email,
+    }
+
     return (
-        <AuthContext.Provider value={{ loginSubmitHandler }}>
+        <AuthContext.Provider value={values}>
             <>
                 <Header />
 
                 <Routes>
-                    <Route path="/" element={<HeroPage />} />
+                    <Route path={Path.Home} element={<HeroPage />} />
                     <Route path="add-pet" element={<CreatePet />} />
                     <Route path="/pets" element={<PetsList />} />
                     <Route path="/pets/:petId" element={<PetDetails />} />
-                    <Route path="/details" element={<PetDetails />} />
                     <Route path="/tips" element={<TipsAndQuestions />} />
                     <Route path="/login" element={<LoginPage />} />
                 </Routes>
