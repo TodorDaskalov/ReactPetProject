@@ -4,7 +4,9 @@ const Path = {
     PetsList: '/pets',
     PetDetails: '/pets/:petId',
     Tips: '/tips',
-    Login: '/login'
+    Login: '/login',
+    Logout: '/logout',
+    Register: '/register'
 }
 
 export default Path
