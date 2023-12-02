@@ -26,7 +26,10 @@ export default function Header() {
                         </>
                     )}
                     {!isAuthenticated && (
-                        <Link to={'/login'} className={styles.liElement}>Register / Login</Link>
+                        <>
+                            <Link to={'/register'} className={styles.liElement}>Register</Link>
+                            <Link to={'/login'} className={styles.liElement}>Login</Link>
+                        </>
                     )}
                     <Link to={'/tips'} className={styles.liElement}>Contacts</Link>
                 </ul>
