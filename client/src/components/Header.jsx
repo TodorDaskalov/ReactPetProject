@@ -10,7 +10,7 @@ export default function Header() {
                     <Link to={'/'} className={styles.liElement}>Home page</Link>
                     <Link to={'/add-pet'} className={styles.liElement}>Add pet</Link>
                     <Link to={'/pets'} className={styles.liElement}>Pet's for adoption</Link>
-                    <Link to={'/details'} className={styles.liElement}>Register / Login</Link>
+                    <Link to={'/login'} className={styles.liElement}>Register / Login</Link>
                     <Link to={'/tips'} className={styles.liElement}>Contacts</Link>
                 </ul>
             </nav>

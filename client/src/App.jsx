@@ -5,6 +5,7 @@ import CreatePet from "./components/CreatePet";
 import PetsList from "./components/PetsList";
 import HeroPage from "./components/HeroPage";
 import TipsAndQuestions from "./components/TipsAndQuestions";
+import LoginPage from "./components/LoginPage";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
                 <Route path="/pets/:petId" element={<PetDetails/>} />
                 <Route path="/details" element={<PetDetails />} />
                 <Route path="/tips" element={<TipsAndQuestions />} />
+                <Route path="/login" element={<LoginPage/>} />
             </Routes>
 
             <Footer />
