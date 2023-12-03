@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./CreatePet.module.css";
+import { getHeaders } from "../../services/authService";
 
 export default function CreatePet() {
     const [petForm, setPetForm] = useState({
@@ -27,12 +28,10 @@ export default function CreatePet() {
 
         try {
             const response = await fetch(
-                "http://localhost:3030/jsonstore/pets",
+                "http://localhost:3030/data/pets",
                 {
                     method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
+                    headers: getHeaders(),
                     body: JSON.stringify(petForm),
                 }
             );
