@@ -22,7 +22,7 @@ export default function Header() {
                         <>
                             <Link to={'/add-pet'} className={styles.liElement}>Add pet</Link>
                             <Link to={'/logout'} className={styles.liElement}>Logout</Link>
-                            <span>Hello {username} </span>
+                            <span>Hello {email} </span>
                         </>
                     )}
                     {!isAuthenticated && (
