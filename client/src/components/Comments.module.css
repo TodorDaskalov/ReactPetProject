@@ -1,0 +1,9 @@
+.commentsSection {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.commentsList {
+    list-style: none;
+    padding: 0;
+}
