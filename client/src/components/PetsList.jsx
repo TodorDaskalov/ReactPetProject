@@ -4,7 +4,6 @@ import styles from "./PetsList.module.css";
 import { deletePet, getAllPets } from "../../services/petService";
 
 export default function PetsList() {
-    
     const [pets, setPets] = useState([]);
 
     useEffect(() => {
@@ -28,15 +27,21 @@ export default function PetsList() {
     return (
         <div className={styles.petsListContainer}>
             <h2 className={styles.blockHeading}>Pets for adoption</h2>
-            <div className={styles.petsListCardsContainer}>
-                {pets.map((pet) => (
-                    <PetCard
-                        key={pet._id}
-                        {...pet}
-                        onDelete={deletePetHandler}
-                    />
-                ))}
-            </div>
+            {pets && pets.length > 0 ? (
+                <div className={styles.petsListCardsContainer}>
+                    {pets.map((pet) => (
+                        <PetCard
+                            key={pet._id}
+                            {...pet}
+                            onDelete={() => deletePetHandler(pet._id)}
+                        />
+                    ))}
+                </div>
+            ) : (
+                <p className={styles.noPetsMessage}>
+                    No pets for adoption at the moment.
+                </p>
+            )}
         </div>
     );
-}
+};
