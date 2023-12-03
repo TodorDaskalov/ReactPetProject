@@ -93,7 +93,7 @@
             // NOTE: the OPTIONS method results in undefined result and also it never processes plugins - keep this in mind
             if (method == 'OPTIONS') {
                 Object.assign(headers, {
-                    'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+                    'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS, PATCH',
                     'Access-Control-Allow-Credentials': false,
                     'Access-Control-Max-Age': '86400',
                     'Access-Control-Allow-Headers': 'X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, X-Authorization, X-Admin'
@@ -1333,12 +1333,136 @@
     			email: "admin@abv.bg",
     			username: "Admin",
     			hashedPassword: "fac7060c3e17e6f151f247eacb2cd5ae80b8c36aedb8764e18a41bbdc16aa302"
-    		}
+    		},
+            "02826832-c126-40d4-98f1-dba55ee0286f": {
+    			email: "todordaskalov@abv.bg",
+    			username: "Todor Daskalov",
+    			hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
+    		},
     	},
     	sessions: {
     	}
     };
     var seedData = {
+        pets: {
+            "07f260f4-466c-4607-9a33-f7273b24f2b5": {
+                "_ownerId": "02826832-c126-40d4-98f1-dba55ee0286f",
+                "name": "Buddy",
+                "breed": "labrador",
+                "age": 2,
+                "imageUrl": "https://www.vidavetcare.com/wp-content/uploads/sites/234/2022/04/labrador-retriever-dog-breed-info.jpeg",
+                "_createdOn": 1701605745460,
+                "_id": "07f260f4-466c-4607-9a33-f7273b24f2b5",
+            },
+            "07f260f4-466c-4607-9a33-d7273b24f2b5": {
+                "_ownerId": "02826832-c126-40d4-98f1-dba55ee0286f",
+                "name": "Romanticharo",
+                "breed": "labrador",
+                "age": 0.5,
+                "imageUrl": "https://wallpapers.com/images/hd/beautiful-dog-pictures-2560-x-2048-2fbryo8cvd4mcqwg.jpg",
+                "_createdOn": 1701605745460,
+                "_id": "07f260f4-466c-4607-9a33-d7273b24f2b5",
+            },
+            "07f260f4-466c-4607-9a33-f7273b23f2b5": {
+                "_ownerId": "02826832-c126-40d4-98f1-dba55ee0286f",
+                "name": "Sharo",
+                "breed": "Street magnificent",
+                "age": 2,
+                "imageUrl": "https://img.freepik.com/premium-photo/happy-street-dog-with-head-tilted-right_297978-9.jpg",
+                "_createdOn": 1701605745460,
+                "_id": "07f260f4-466c-4607-9a33-f7273b23f2b5",
+            },
+            "07f260f4-466c-4607-9a33-f7273b21f2b5": {
+                "_ownerId": "02826832-c126-40d4-98f1-dba55ee0286f",
+                "name": "Maro",
+                "breed": "Street magnificent",
+                "age": 2,
+                "imageUrl": "https://img.freepik.com/free-photo/isolated-happy-smiling-dog-white-background-portrait-4_1562-693.jpg",
+                "_createdOn": 1701605745460,
+                "_id": "07f260f4-466c-4607-9a33-f7273b21f2b5",
+            },
+            "07f260f4-466c-4607-9a33-f7273b22f2b5": {
+                "_ownerId": "02826832-c126-40d4-98f1-dba55ee0286f",
+                "name": "Karo",
+                "breed": "Street magnificent",
+                "age": 2,
+                "imageUrl": "https://www.thesprucepets.com/thmb/HAXua0m1oC4ahFBDLc8k0j9y0YQ=/3300x0/filters:no_upscale():strip_icc()/fluffiest-dogs-ever-4589343-hero-939e88f02bae4cfdb557bb7c15ee5384.jpg",
+                "_createdOn": 1701605745460,
+                "_id": "07f260f4-466c-4607-9a33-f7273b22f2b5",
+            },
+            "07f260f4-466c-4607-9a33-f7273b29f2b5": {
+                "_ownerId": "02826832-c126-40d4-98f1-dba55ee0286f",
+                "name": "Paro",
+                "breed": "Street magnificent",
+                "age": 2,
+                "imageUrl": "https://cdn.mos.cms.futurecdn.net/ASHH5bDmsp6wnK6mEfZdcU.jpg",
+                "_createdOn": 1701605745460,
+                "_id": "07f260f4-466c-4607-9a33-f7273b29f2b5",
+            },
+            "07f260f4-466c-4607-9a33-f7273b13f2b5": {
+                "_ownerId": "02826832-c126-40d4-98f1-dba55ee0286f",
+                "name": "Taro",
+                "breed": "Street magnificent",
+                "age": 2,
+                "imageUrl": "https://hips.hearstapps.com/hmg-prod/images/best-guard-dogs-1650302456.jpeg?crop=0.754xw:1.00xh;0.0651xw,0&resize=1200:*",
+                "_createdOn": 1701605745460,
+                "_id": "07f260f4-466c-4607-9a33-f7273b13f2b5",
+            },
+            "07f260f4-466c-4607-9a33-f7273b12f2b5": {
+                "_ownerId": "02826832-c126-40d4-98f1-dba55ee0286f",
+                "name": "Raro",
+                "breed": "Street magnificent",
+                "age": 2,
+                "imageUrl": "https://www.purina.co.uk/sites/default/files/2020-12/Dog_1098119012_Teaser.jpg",
+                "_createdOn": 1701605745460,
+                "_id": "07f260f4-466c-4607-9a33-f7273b12f2b5",
+            },
+            "07f260f4-466c-4607-9a33-f7273b17f2b5": {
+                "_ownerId": "02826832-c126-40d4-98f1-dba55ee0286f",
+                "name": "Laro",
+                "breed": "Street magnificent",
+                "age": 2,
+                "imageUrl": "https://images.pexels.com/photos/2607544/pexels-photo-2607544.jpeg?cs=srgb&dl=pexels-simona-kidri%C4%8D-2607544.jpg&fm=jpg",
+                "_createdOn": 1701605745460,
+                "_id": "07f260f4-466c-4607-9a33-f7273b17f2b5",
+            },
+            "07f260f4-466c-4607-9a33-f7273b33f2b5": {
+                "_ownerId": "02826832-c126-40d4-98f1-dba55ee0286f",
+                "name": "Poparo",
+                "breed": "Funny magnificent",
+                "age": 3,
+                "imageUrl": "https://media.npr.org/assets/img/2022/11/23/russian-toy-2-3-_custom-fd300880a9643efca73031d33f38ca7f4054b710.jpg",
+                "_createdOn": 1701605745460,
+                "_id": "07f260f4-466c-4607-9a33-f7273b33f2b5",
+            },
+            "07f260f4-466c-4607-9a33-s7273b33f2b5": {
+                "_ownerId": "02826832-c126-40d4-98f1-dba55ee0286f",
+                "name": "Poparo's girl",
+                "breed": "Cool magnificent",
+                "age": 2,
+                "imageUrl": "https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA3L3Jhd3BpeGVsX29mZmljZV82X2FfcG9vZGxlXzYzZWU0M2Q3LWU0OGItNDYwMC05OGVkLWIyNTEzNDYzZWQwOS5qcGc.jpg",
+                "_createdOn": 1701605745460,
+                "_id": "07f260f4-466c-4607-9a33-s7273b33f2b5",
+            },    
+            "07f260f4-466c-4607-9a33-f7273b77f2b5": {
+                "_ownerId": "02826832-c126-40d4-98f1-dba55ee0286f",
+                "name": "Jaro",
+                "breed": "Street magnificent",
+                "age": 2,
+                "imageUrl": "https://cdn.britannica.com/72/234472-050-735B6214/maltese-dog.jpg",
+                "_createdOn": 1701605745460,
+                "_id": "07f260f4-466c-4607-9a33-f7273b77f2b5",
+            },
+            "07f260f4-466c-4607-9a33-f7273b99f2b5": {
+                "_ownerId": "02826832-c126-40d4-98f1-dba55ee0286f",
+                "name": "Baro",
+                "breed": "Street magnificent",
+                "age": 2,
+                "imageUrl": "https://hips.hearstapps.com/hmg-prod/images/wolf-dog-breeds-siberian-husky-1570411330.jpg?crop=1xw:0.84375xh;center,top",
+                "_createdOn": 1701605745460,
+                "_id": "07f260f4-466c-4607-9a33-f7273b99f2b5",
+            }
+        },
     	recipes: {
     		"3987279d-0ad4-4afb-8ca9-5b256ae3b298": {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
@@ -1399,7 +1523,14 @@
     			recipeId: "8f414b4f-ab39-4d36-bedb-2ad69da9c830",
     			_createdOn: 1614260681375,
     			_id: "0a272c58-b7ea-4e09-a000-7ec988248f66"
-    		}
+    		},
+            "0a272c58-b7ea-4e09-a000-7ec988248f67": {
+    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+    			content: "Great recipe 23!",
+    			recipeId: "8f414b4f-ab39-4d36-bedb-2ad69da9c823",
+    			_createdOn: 1614260681375,
+    			_id: "0a272c58-b7ea-4e09-a000-7ec988248f66"
+    		},
     	},
     	records: {
     		i01: {
