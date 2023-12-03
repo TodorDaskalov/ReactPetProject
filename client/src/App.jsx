@@ -15,16 +15,21 @@ import HeroPage from "./components/HeroPage";
 import TipsAndQuestions from "./components/TipsAndQuestions";
 import LoginPage from "./components/LoginPage";
 import RegisterPage from "./components/RegisterPage";
+import Logout from "./components/Logout";
 
 function App() {
     const navigate = useNavigate();
-    const [auth, setAuth] = useState({});
+    const [auth, setAuth] = useState(() => {
+        localStorage.removeItem('accessToken');
+
+        return {};
+    });
 
     const loginSubmitHandler = async (email, password) => {
         const result = await authService.login(email, password);
 
         setAuth(result);
-
+        localStorage.setItem('accessToken', result.accessToken);
         navigate(Path.Home);
     };
 
@@ -32,13 +37,19 @@ function App() {
         const result = await authService.register(email, password)
 
         setAuth(result);
-
+        localStorage.setItem('accessToken', result.accessToken);
         navigate(Path.Home);
+    }
+
+    const logoutHandler =  () => {
+        setAuth({});
+        localStorage.removeItem('accessToken');
     }
 
     const values = {
         loginSubmitHandler,
         registerSubmitHandler,
+        logoutHandler,
         username: auth.username,
         email: auth.email,
         isAuthenticated: !!auth.email,
@@ -56,7 +67,7 @@ function App() {
                     <Route path={Path.PetDetails} element={<PetDetails />} />
                     <Route path={Path.Tips} element={<TipsAndQuestions />} />
                     <Route path={Path.Login} element={<LoginPage />} />
-                    <Route path={Path.Logout} element={<LoginPage />} />
+                    <Route path={Path.Logout} element={<Logout />} />
                     <Route path={Path.Register} element={<RegisterPage />} />
 
                 </Routes>
