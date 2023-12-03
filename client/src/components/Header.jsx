@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import styles from './Header.module.css'
 import { useContext } from 'react';
 import AuthContext from '../contexts/AuthContext';
+import Path from '../appPaths';
 
 export default function Header() {
 
@@ -16,22 +17,22 @@ export default function Header() {
             <h1 className={styles.header}>Viki's Pet Nursery</h1>
             <nav className={styles.navElement}>
                 <ul className={styles.ulElement}>
-                    <Link to={'/'} className={styles.liElement}>Home page</Link>
-                    <Link to={'/pets'} className={styles.liElement}>Pet's for adoption</Link>
+                    <Link to={Path.Home} className={styles.liElement}>Home page</Link>
+                    <Link to={Path.PetsList} className={styles.liElement}>Pet's for adoption</Link>
                     {isAuthenticated && ( 
                         <>
-                            <Link to={'/add-pet'} className={styles.liElement}>Add pet</Link>
-                            <Link to={'/logout'} className={styles.liElement}>Logout</Link>
+                            <Link to={Path.AddPet} className={styles.liElement}>Add pet</Link>
+                            <Link to={Path.Logout} className={styles.liElement}>Logout</Link>
                             <span>Hello {email} </span>
                         </>
                     )}
                     {!isAuthenticated && (
                         <>
-                            <Link to={'/register'} className={styles.liElement}>Register</Link>
-                            <Link to={'/login'} className={styles.liElement}>Login</Link>
+                            <Link to={Path.Register} className={styles.liElement}>Register</Link>
+                            <Link to={Path.Login} className={styles.liElement}>Login</Link>
                         </>
                     )}
-                    <Link to={'/tips'} className={styles.liElement}>Contacts</Link>
+                    <Link to={Path.Tips} className={styles.liElement}>Contacts</Link>
                 </ul>
             </nav>
         </div>
