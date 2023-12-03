@@ -13,9 +13,9 @@ export default function PetCard({ _id, name, breed, imageUrl, age, onDelete }) {
             <Card.Img variant="top" src={imageUrl} />
             <Card.Body>
                 <Card.Title>{name}</Card.Title>
-                <Card.Text>
-                    <li>{breed}</li>
-                    <li>{age}</li>
+                <Card.Text style={{ listStyle: 'none', padding: 0 }}>
+                    <li>Breed: {breed}</li>
+                    <li>Age: {age}</li>
                     {/* <li>{birth_year}</li> */}
                     {/* <li>{gender}</li> */}
                 </Card.Text>
