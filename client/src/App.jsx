@@ -62,7 +62,7 @@ function App() {
 
                 <Routes>
                     <Route path={Path.Home} element={<HeroPage />} />
-                    <Route path={Path.CreatePet} element={<CreatePet />} />
+                    <Route path={Path.AddPet} element={<CreatePet />} />
                     <Route path={Path.PetsList} element={<PetsList />} />
                     <Route path={Path.PetDetails} element={<PetDetails />} />
                     <Route path={Path.Tips} element={<TipsAndQuestions />} />
