@@ -1,6 +1,6 @@
 const Path = {
     Home: '/',
-    AddPet: 'add-pet',
+    AddPet: '/add-pet',
     PetsList: '/pets',
     PetDetails: '/pets/:petId',
     Tips: '/tips',
