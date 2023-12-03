@@ -1,19 +1,16 @@
 import { useEffect, useState } from "react";
 import PetCard from "./PetCard";
 import styles from "./PetsList.module.css";
-import { deletePet } from "../../services/petService";
+import { deletePet, getAllPets } from "../../services/petService";
 
 export default function PetsList() {
-    let baseUrl = "http://localhost:3030/jsonstore/pets";
-
+    
     const [pets, setPets] = useState([]);
 
     useEffect(() => {
-        fetch(baseUrl)
-            .then((res) => res.json())
-            .then((data) => {
-                setPets(Object.values(data));
-            });
+        getAllPets()
+            .then((petsData) => setPets(petsData))
+            .catch((error) => console.error("Error fetching pets:", error));
     }, []);
 
     const deletePetHandler = async (petId) => {
