@@ -22,14 +22,14 @@ export default function tipsAndQuestions() {
                 <div className="grid_4 prefix_2">
                     <h2 className="ic1">Any Question?</h2>
                     <img
-                        src="images/page1_img4.jpg"
+                        src="https://media.istockphoto.com/id/1445196818/photo/group-of-cute-pets-on-white-background-banner-design.webp?b=1&s=170667a&w=0&k=20&c=iQ527QsrVbpECw-3b8GQVw0YD5FhBoorJzFPYQSw_40="
                         alt=""
                         className="fleft img_inner"
                     />
                     <div className="extra_wrapper">
                         <div className="cont">
                             {" "}
-                            Call Us Free: <span>+1 800 559 6580</span>{" "}
+                            Call Us Free: <span>+359 888 888888</span>{" "}
                         </div>
                     </div>
                     <div className="clear" />
