@@ -8,22 +8,6 @@
     align-items: center;
   }
   
-  .socials {
-    margin-bottom: 20px;
-  }
-  
-  .socials a {
-    display: inline-block;
-    margin-right: 10px;
-    font-size: 24px;
-    color: white;
-    transition: color 0.4s;
-  }
-  
-  .socials a:hover {
-    color: rgb(198, 233, 0);
-  }
-  
   p {
     font-size: 18px;
     margin: 0;
