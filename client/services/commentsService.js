@@ -1,15 +1,14 @@
 import { getHeaders } from "./authService";
 
-const baseUrl = "http://localhost:3030/jsonstore/comments";
+const baseUrl = "http://localhost:3030/data/comments";
 
 export const postComment = async (petId, user, content) => {
     try {
+        const tryHeaders = getHeaders();
+
         const response = await fetch(baseUrl, {
             method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                // headers: getHeaders()
-            },
+            headers: getHeaders(),
             body: JSON.stringify({
                 petId,
                 user,
@@ -63,9 +62,7 @@ export const updateComment = async (commentId, newContent) => {
     try {
         const response = await fetch(`${baseUrl}/${commentId}`, {
             method: "PATCH",
-            headers: {
-                "Content-Type": "application/json",
-            },
+            headers: getHeaders(),
             body: JSON.stringify({
                 content: newContent,
             }),
