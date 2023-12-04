@@ -13,7 +13,7 @@ export default function Comments({ petId }) {
     const [comment, setComment] = useState("");
     const [comments, setComments] = useState([]);
 
-    const addComment = async () => {
+    const addCommentHandler = async () => {
         if (comment.trim() !== "") {
             try {
                 const newComment = await postComment(petId, "user123", comment);
@@ -80,7 +80,7 @@ export default function Comments({ petId }) {
                     className={styles.commentInput}
                 />
                 <button
-                    onClick={addComment}
+                    onClick={addCommentHandler}
                     className={styles.addCommentButton}
                 >
                     Add Comment / Question
