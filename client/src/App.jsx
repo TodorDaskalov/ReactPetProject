@@ -14,6 +14,7 @@ import TipsAndQuestions from "./components/TipsAndQuestions";
 import LoginPage from "./components/LoginPage";
 import RegisterPage from "./components/RegisterPage";
 import Logout from "./components/Logout";
+import EditPet from "./components/EditPet";
 
 function App() {
     
@@ -24,6 +25,7 @@ function App() {
                 <Routes>
                     <Route path={Path.Home} element={<HeroPage />} />
                     <Route path={Path.AddPet} element={<CreatePet />} />
+                    <Route path={Path.EditPet} element={<EditPet />} />
                     <Route path={Path.PetsList} element={<PetsList />} />
                     <Route path={Path.PetDetails} element={<PetDetails />} />
                     <Route path={Path.Tips} element={<TipsAndQuestions />} />

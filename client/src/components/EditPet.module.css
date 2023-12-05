@@ -1,0 +1,29 @@
+.editPetForm {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.editPetForm label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.editPetForm input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.editPetForm button {
+    background-color: #4285f4; /* Change the color as needed */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
