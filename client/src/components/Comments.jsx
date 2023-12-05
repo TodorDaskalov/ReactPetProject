@@ -9,15 +9,15 @@ import styles from "./Comments.module.css";
 
 import Comment from "./Comment";
 
-export default function Comments({ petId }) {
+export default function Comments({ petId, email }) {
     const [comment, setComment] = useState("");
     const [comments, setComments] = useState([]);
 
     const addCommentHandler = async () => {
         if (comment.trim() !== "") {
             try {
-                const newComment = await postComment(petId, "user123", comment);
-                setComments([...comments, newComment]);
+                const newComment = await postComment(petId, comment);
+                setComments(comments => [...comments, {...newComment, owner: {email: email}}]);
                 setComment("");
             } catch (error) {
                 console.error("Error posting comment:", error);
@@ -53,7 +53,7 @@ export default function Comments({ petId }) {
     };
 
     useEffect(() => {
-        getAllComments()
+        getAllComments(petId)
             .then((commentsData) => setComments(commentsData))
             .catch((error) => console.error("Error fetching comments:", error));
     }, []);
@@ -62,7 +62,7 @@ export default function Comments({ petId }) {
         <div className={styles.commentsSection}>
             <h2>Comments/Questions:</h2>
             <ul className={styles.commentsList}>
-                {Object.values(comments).map((comment) => (
+                {comments.map((comment) => (
                     <Comment
                         key={comment._id}
                         comment={comment}
