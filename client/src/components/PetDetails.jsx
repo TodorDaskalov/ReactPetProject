@@ -1,12 +1,13 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styles from "./PetDetails.module.css";
 import { getPetDetails } from "../../services/petService";
 import Comments from "./Comments";
+import AuthContext from "../contexts/AuthContext";
 
 export default function PetDetails() {
+    const {email} = useContext(AuthContext);
     const { petId } = useParams();
-
     const [pet, setPet] = useState({});
 
     useEffect(() => {
@@ -35,7 +36,7 @@ export default function PetDetails() {
                 </div>
                 <button className={styles.adoptButton}>Adopt Me</button>
             </div>
-            <Comments petId={petId} />
+            <Comments petId={petId} email={email} />
         </div>
     );
 }
