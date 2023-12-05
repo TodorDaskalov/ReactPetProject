@@ -29,7 +29,7 @@ export default function Comment({ comment, onEdit, onDelete }) {
 
     return (
         <li key={comment._id} className={styles.commentItem}>
-            <div>{comment._ownerId}</div>
+            <div>{comment.owner.email}</div>
             <div className={styles.commentBox}>
                 {isEditing ? (
                     <>
