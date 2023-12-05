@@ -1,12 +1,18 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
+import AuthContext from "../contexts/AuthContext";
+import { useContext } from "react";
 
-export default function PetCard({ _id, name, breed, imageUrl, age, onDelete }) {
+export default function PetCard({ _ownerId, _id, name, breed, imageUrl, age, onDelete }) {
 
     const onClickDeleteHandler = () => {
         onDelete(_id);
     };
+
+    const {userId} = useContext(AuthContext);
+
+    const isOwner = userId === _ownerId;
 
     return (
         <Card style={{ width: "18rem", margin: "10px 0px" }}>
@@ -22,10 +28,14 @@ export default function PetCard({ _id, name, breed, imageUrl, age, onDelete }) {
                 <Link to={_id}>
                     <Button variant="primary">Details</Button>
                 </Link>
-                <Link to={""}>
-                    <Button variant="primary">Edit</Button>
-                </Link>
-                <Button variant="danger" onClick={onClickDeleteHandler}>Delete</Button>
+                {isOwner && (
+                    <>
+                        <Link to={""}>
+                            <Button variant="primary">Edit</Button>
+                        </Link>
+                        <Button variant="danger" onClick={onClickDeleteHandler}>Delete</Button>
+                    </>
+                )}
             </Card.Body>
         </Card>
     );
