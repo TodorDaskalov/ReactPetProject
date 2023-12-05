@@ -3,6 +3,7 @@ import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 import AuthContext from "../contexts/AuthContext";
 import { useContext } from "react";
+import Path from "../appPaths";
 
 export default function PetCard({ _ownerId, _id, name, breed, imageUrl, age, onDelete }) {
 
@@ -30,7 +31,7 @@ export default function PetCard({ _ownerId, _id, name, breed, imageUrl, age, onD
                 </Link>
                 {isOwner && (
                     <>
-                        <Link to={""}>
+                        <Link to={`edit-pet/${_id}`}>
                             <Button variant="primary">Edit</Button>
                         </Link>
                         <Button variant="danger" onClick={onClickDeleteHandler}>Delete</Button>
