@@ -2,16 +2,33 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 import AuthContext from "../contexts/AuthContext";
-import { useContext } from "react";
-import Path from "../appPaths";
+import { useContext, useState } from "react";
+import ConfirmationModal from "../modals/ConfirmationModal";
 
-export default function PetCard({ _ownerId, _id, name, breed, imageUrl, age, onDelete }) {
+export default function PetCard({
+    _ownerId,
+    _id,
+    name,
+    breed,
+    imageUrl,
+    age,
+    onDelete,
+}) {
+    const [showConfirmation, setShowConfirmation] = useState(false);
+
+    const handleClose = () => setShowConfirmation(false);
+    const handleShow = () => setShowConfirmation(true);
 
     const onClickDeleteHandler = () => {
-        onDelete(_id);
+        handleShow();
     };
 
-    const {userId} = useContext(AuthContext);
+    const confirmationDeleteHandler = () => {
+        onDelete(_id);
+        handleClose();
+    };
+
+    const { userId } = useContext(AuthContext);
 
     const isOwner = userId === _ownerId;
 
@@ -20,7 +37,7 @@ export default function PetCard({ _ownerId, _id, name, breed, imageUrl, age, onD
             <Card.Img variant="top" src={imageUrl} />
             <Card.Body>
                 <Card.Title>{name}</Card.Title>
-                <Card.Text style={{ listStyle: 'none', padding: 0 }}>
+                <Card.Text style={{ listStyle: "none", padding: 0 }}>
                     <li>Breed: {breed}</li>
                     <li>Age: {age}</li>
                     {/* <li>{birth_year}</li> */}
@@ -34,10 +51,17 @@ export default function PetCard({ _ownerId, _id, name, breed, imageUrl, age, onD
                         <Link to={`/pets/edit-pet/${_id}`}>
                             <Button variant="primary">Edit</Button>
                         </Link>
-                        <Button variant="danger" onClick={onClickDeleteHandler}>Delete</Button>
+                        <Button variant="danger" onClick={onClickDeleteHandler}>
+                            Delete
+                        </Button>
+                        <ConfirmationModal
+                            show={showConfirmation}
+                            handleClose={handleClose}
+                            handleConfirm={confirmationDeleteHandler}
+                        />
                     </>
                 )}
             </Card.Body>
         </Card>
     );
-};
+}

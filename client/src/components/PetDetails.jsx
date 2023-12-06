@@ -6,12 +6,17 @@ import { deletePet, getPetDetails } from "../../services/petService";
 import Comments from "./Comments";
 import AuthContext from "../contexts/AuthContext";
 import Path from "../appPaths";
+import ConfirmationModal from "../modals/ConfirmationModal";
 
 export default function PetDetails() {
     const { userId } = useContext(AuthContext);
     const { petId } = useParams();
     const [pet, setPet] = useState({});
     const navigate = useNavigate();
+    const [showDeleteConfirmation, setShowDeleteConfirmation] = useState(false);
+
+    const handleDeleteModalShow = () => setShowDeleteConfirmation(true);
+    const handleDeleteModalClose = () => setShowDeleteConfirmation(false);
 
     useEffect(() => {
         getPetDetails(petId).then(setPet);
@@ -20,11 +25,16 @@ export default function PetDetails() {
     const isOwner = pet._ownerId === userId;
 
     const handleEditClick = () => {
-        navigate(`/pets/edit-pet/${petId}`)
+        navigate(`/pets/edit-pet/${petId}`);
     };
 
     const handleDeleteClick = () => {
+        handleDeleteModalShow();
+    };
+
+    const handleDeleteConfirmed = () => {
         deletePet(petId);
+        handleDeleteModalClose();
         navigate(Path.PetsList);
     };
 
@@ -36,7 +46,10 @@ export default function PetDetails() {
             <div className={styles.petInfo}>
                 <h1 className={styles.petName}>{pet.name}</h1>
                 <p className={styles.petDescription}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora cum distinctio ab maiores illum explicabo obcaecati consequuntur facere provident esse. Atque minus laboriosam a nisi dolor veritatis nulla, laudantium corporis!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Tempora cum distinctio ab maiores illum explicabo obcaecati
+                    consequuntur facere provident esse. Atque minus laboriosam a
+                    nisi dolor veritatis nulla, laudantium corporis!
                 </p>
                 <div className={styles.petDetailsInfo}>
                     <div className={styles.petDetail}>
@@ -56,12 +69,18 @@ export default function PetDetails() {
                         >
                             Edit
                         </Button>
-                        <Button variant="danger"
+                        <Button
+                            variant="danger"
                             onClick={handleDeleteClick}
                             className={styles.deleteButton}
                         >
                             Delete
                         </Button>
+                        <ConfirmationModal
+                            show={showDeleteConfirmation}
+                            handleClose={handleDeleteModalClose}
+                            handleConfirm={handleDeleteConfirmed}
+                        />
                     </>
                 )}
             </div>
