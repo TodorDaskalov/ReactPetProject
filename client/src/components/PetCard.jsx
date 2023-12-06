@@ -26,12 +26,12 @@ export default function PetCard({ _ownerId, _id, name, breed, imageUrl, age, onD
                     {/* <li>{birth_year}</li> */}
                     {/* <li>{gender}</li> */}
                 </Card.Text>
-                <Link to={_id}>
+                <Link to={`/pets/${_id}`}>
                     <Button variant="primary">Details</Button>
                 </Link>
                 {isOwner && (
                     <>
-                        <Link to={`edit-pet/${_id}`}>
+                        <Link to={`/pets/edit-pet/${_id}`}>
                             <Button variant="primary">Edit</Button>
                         </Link>
                         <Button variant="danger" onClick={onClickDeleteHandler}>Delete</Button>
