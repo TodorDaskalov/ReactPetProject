@@ -23,7 +23,7 @@ export default function Header() {
                         <>
                             <Link to={Path.AddPet} className={styles.liElement}>Add pet</Link>
                             <Link to={Path.Logout} className={styles.liElement}>Logout</Link>
-                            <span>Hello {email} </span>
+                            <Link to={Path.MyPets} className={styles.liElement}>My Pets</Link>
                         </>
                     )}
                     {!isAuthenticated && (
