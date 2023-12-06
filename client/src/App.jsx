@@ -9,6 +9,7 @@ import Header from "./components/Header";
 import PetDetails from "./components/PetDetails";
 import CreatePet from "./components/CreatePet";
 import PetsList from "./components/PetsList";
+import MyPets from "./components/MyPets";
 import HeroPage from "./components/HeroPage";
 import TipsAndQuestions from "./components/TipsAndQuestions";
 import LoginPage from "./components/LoginPage";
@@ -27,6 +28,7 @@ function App() {
                     <Route path={Path.AddPet} element={<CreatePet />} />
                     <Route path={Path.EditPet} element={<EditPet />} />
                     <Route path={Path.PetsList} element={<PetsList />} />
+                    <Route path={Path.MyPets} element={<MyPets />} />
                     <Route path={Path.PetDetails} element={<PetDetails />} />
                     <Route path={Path.Tips} element={<TipsAndQuestions />} />
                     <Route path={Path.Login} element={<LoginPage />} />
