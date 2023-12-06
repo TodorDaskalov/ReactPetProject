@@ -16,6 +16,26 @@ export const getPetDetails = async (petId) => {
     return data;
 };
 
+export const getMyPets = async (userId) => {
+    try {
+        const query = new URLSearchParams({
+            where: `_ownerId="${userId}"`
+        });
+
+        const response = await fetch(`${baseUrl}/pets?${query}`);
+
+        if (response.status === 204) {
+            return [];
+        }
+
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error("Error fetching pets:", error);
+        throw error;
+    }
+};
+
 export const deletePet = async (petId) => {
     await fetch(`${baseUrl}/pets/${petId}`, {
         method: "DELETE",
