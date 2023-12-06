@@ -1,0 +1,21 @@
+.notFoundContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background-image: url('https://img.freepik.com/premium-photo/dog-looking-up-stars_256339-5199.jpg');
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+.title {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.message {
+    font-size: 18px;
+}
