@@ -44,7 +44,7 @@ export default function PetCard({
                     {/* <li>{gender}</li> */}
                 </Card.Text>
                 <Link to={`/pets/${_id}`}>
-                    <Button variant="primary">Details</Button>
+                    <Button variant="success">Details</Button>
                 </Link>
                 {isOwner && (
                     <>
