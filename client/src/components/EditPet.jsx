@@ -16,7 +16,7 @@ export default function EditPet() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        const fetchPetData = async () => {
+        const petData = async () => {
             try {
                 const petData = await getPetDetails(petId);
 
@@ -31,7 +31,7 @@ export default function EditPet() {
             };
         };
 
-        fetchPetData();
+        petData();
     }, [petId]);
 
     const inputChangeHandler = (e) => {
