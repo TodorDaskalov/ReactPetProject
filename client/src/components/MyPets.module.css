@@ -1,0 +1,20 @@
+.blockHeading {
+    text-align: center;
+    font-size: 56px;
+}
+
+.petsListContainer {
+    text-align: center;
+}
+
+.petsListCardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.noPetsMessage {
+    font-size: 24px;
+    color: #888;
+    margin-top: 20px;
+}
