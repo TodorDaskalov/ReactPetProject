@@ -18,6 +18,7 @@ import Logout from "./components/Logout";
 import EditPet from "./components/EditPet";
 import ErrorBoundary from "./components/ErrorBoundary";
 import NotFoundPage from "./components/notFoundPage";
+import AuthGuard from "./components/AuthGuard";
 
 function App() {
     return (
@@ -27,25 +28,18 @@ function App() {
                     <Header />
                     <Routes>
                         <Route path={Path.Home} element={<HeroPage />} />
-                        <Route path={Path.AddPet} element={<CreatePet />} />
-                        <Route path={Path.EditPet} element={<EditPet />} />
                         <Route path={Path.PetsList} element={<PetsList />} />
-                        <Route path={Path.MyPets} element={<MyPets />} />
-                        <Route
-                            path={Path.PetDetails}
-                            element={<PetDetails />}
-                        />
-                        <Route
-                            path={Path.Tips}
-                            element={<TipsAndQuestions />}
-                        />
+                        <Route path={Path.PetDetails} element={<PetDetails />} />
+                        <Route path={Path.Tips} element={<TipsAndQuestions />} />
                         <Route path={Path.Login} element={<LoginPage />} />
-                        <Route path={Path.Logout} element={<Logout />} />
-                        <Route
-                            path={Path.Register}
-                            element={<RegisterPage />}
-                        />
+                        <Route path={Path.Register} element={<RegisterPage />} />
                         <Route path="*" element={<NotFoundPage />} />
+                        <Route element={<AuthGuard />}>
+                            <Route path={Path.AddPet} element={<CreatePet />} />
+                            <Route path={Path.EditPet} element={<EditPet />} />
+                            <Route path={Path.MyPets} element={<MyPets />} />
+                            <Route path={Path.Logout} element={<Logout />} />
+                        </Route>
                     </Routes>
                     <Footer />
                 </>
