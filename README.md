@@ -55,7 +55,7 @@ A `utils` folder hosts utility functions like `formatDateString` and `getCurrent
 The application has been successfully deployed on Firebase Hosting. Firebase CLI and Hosting were utilized for the deployment process.
 
 1. **Firebase Setup**: Use the Firebase CLI to initialize a project and configure Firebase Hosting.
-2. **Build Process**: Run `npm build` to generate the optimized production build.
+2. **Build Process**: Run `npm run build` to generate the optimized production build.
 3. **Firebase Deployment**: Execute `firebase deploy` to deploy the built project to Firebase Hosting.
 
 The live version of the application is accessible on the deployed Firebase URL.
