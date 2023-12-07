@@ -1,51 +1,58 @@
-Project Documentation
-Project Overview
-This project is a Pet Adoption site, allowing users to adopt pets or post pets for adoption. Users can interact with pets through comments and questions. The application is built using React with Vite as the development server.
+Pet Adoption Site
 
-Project Architecture
-The project follows a React app architecture. The main components include:
+Overview
+
+Pet Adoption Site is a web application designed to facilitate pet adoption. Users can explore pets available for adoption, post pets for adoption, and engage in discussions by commenting or asking questions about pets.
+
+Project Details
+
+Tech Stack: The project is developed using React with Vite as the build tool. JavaScript (JS) is primarily used, and JSX is employed for React components. Styling is done with CSS.
+
+Key Components:
 
 PetList: Displays a list of pets available for adoption.
 Add Pet: Allows users to post pets for adoption.
-Register: User registration component.
-Login: User login component.
-Logout: Handles user logout.
-Additional components for pet details, comments, and more.
-Technology Stack
-The technology stack includes:
+Register/Login/Logout: Handles user authentication.
+Routing: Utilizes React Router for navigation with route guards for authorization.
+External API Integration: Fetches weather data from api.open-meteo.com.
 
-JavaScript (JS)
-JSX for React components
-CSS for styling
-React with Vite for development
-Database Structure
-The project uses a practice server provided by SoftUni. It doesn't involve a traditional database.
+Server and Database:
 
-Authentication and Authorization
-Authentication and authorization are handled using access tokens. Users need to log in to perform certain actions, ensuring secure access to features.
+The project uses a development server provided by the course provider. A database is not employed; instead, practice data is served from the server.
 
-Routing and Navigation
-Routing and navigation are implemented using React Router's Routes and Route components. Route guards are employed to control access to certain pages.
+Authentication and Authorization:
 
-State Management
-State management is primarily handled using React's built-in state management features like useState and useContext. Although there is a future plan for Redux implementation, it's not currently integrated.
+Authentication is managed using access tokens. Users can register, login, and logout.
+Route guards are implemented to ensure authorized access to specific routes.
 
-APIs and Services
-The project interacts with the api.open-meteo.com API to retrieve weather information, including the current temperature, max/min temperature, and weather predictions for the next 3 hours.
+State Management:
 
-Error Handling
-Error handling is implemented through the usage of try-catch structures for asynchronous code. Additionally, an ErrorBoundary is in place to capture errors within the application.
+React's built-in state management tools like useState and useContext are employed.
 
-Project Structure
-The project structure includes:
+Error Handling:
 
-src folder
-components folder: Houses all React components along with their respective CSS files.
-contexts folder: Contains AuthContext for handling authentication context.
-modals folder: Manages modal components.
-hooks folder: Contains a custom hook, usePersistedState.
-services folder: Houses service files for authService, petService, and commentService.
-utils folder: Holds utility functions like formatDateString and getCurrentHour.
-App component: The main component orchestrating the application.
-Deployment
-The project is planned for deployment on Firebase.
+The project features an ErrorBoundary component to catch errors.
+Asynchronous code incorporates try-catch structures for error handling.
+Services:
+
+A services folder contains modules like authService, petService, and commentService to handle specific functionalities.
+
+Contexts:
+
+The contexts folder houses an AuthContext file.
+
+Modals and Hooks:
+
+Modal functionality is implemented, and a hooks folder contains custom hooks, including usePersistedState.
+
+Utils:
+
+A utils folder hosts utility functions like formatDateString and getCurrentHour.
+
+Deployment:
+
+The application has been successfully deployed on Firebase Hosting. Firebase CLI and Hosting were utilized for the deployment process.
+
+Additional Notes
+The project will be further enhanced with Redux implementation in the future.
+External API api.open-meteo.com is integrated to fetch weather data.
