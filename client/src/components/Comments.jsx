@@ -9,11 +9,10 @@ import styles from "./Comments.module.css";
 import AuthContext from "../contexts/AuthContext";
 import Comment from "./Comment";
 
-export default function Comments({ pet, petId, email }) {
+export default function Comments({ petId }) {
     const [comment, setComment] = useState("");
     const [comments, setComments] = useState([]);
-    const { userId } = useContext(AuthContext);
-    const isOwner = pet._ownerId === userId;
+    const { userId, email } = useContext(AuthContext);
 
     const addCommentHandler = async () => {
         if (comment.trim() !== "") {
@@ -80,7 +79,7 @@ export default function Comments({ pet, petId, email }) {
             ) : (
                 <p>No comments or questions at the moment.</p>
             )}
-            {isOwner && (
+            {userId && (
                 <div className={styles.commentInputContainer}>
                     <input
                         type="text"
