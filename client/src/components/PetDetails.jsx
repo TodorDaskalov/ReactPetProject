@@ -84,7 +84,7 @@ export default function PetDetails() {
                     </>
                 )}
             </div>
-            <Comments petId={petId} pet={pet} />
+            <Comments petId={petId} />
         </div>
     );
 }
