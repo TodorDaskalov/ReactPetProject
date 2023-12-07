@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./CreatePet.module.css";
-import { getHeaders } from "../../services/authService";
+import { addPet } from "../../services/petService";
 
 export default function CreatePet() {
     const [petForm, setPetForm] = useState({
@@ -27,14 +27,7 @@ export default function CreatePet() {
         setIsSubmitting(true);
 
         try {
-            const response = await fetch(
-                "http://localhost:3030/data/pets",
-                {
-                    method: "POST",
-                    headers: getHeaders(),
-                    body: JSON.stringify(petForm),
-                }
-            );
+            const response = await addPet(petForm);
 
             if (!response.ok) {
                 throw new Error("Failed to add pet");

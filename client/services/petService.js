@@ -19,7 +19,7 @@ export const getPetDetails = async (petId) => {
 export const getMyPets = async (userId) => {
     try {
         const query = new URLSearchParams({
-            where: `_ownerId="${userId}"`
+            where: `_ownerId="${userId}"`,
         });
 
         const response = await fetch(`${baseUrl}/pets?${query}`);
@@ -32,6 +32,26 @@ export const getMyPets = async (userId) => {
         return data;
     } catch (error) {
         console.error("Error fetching pets:", error);
+        throw error;
+    }
+};
+
+export const addPet = async (petForm) => {
+    try {
+        const response = await fetch(`${baseUrl}/pets`, {
+            method: "POST",
+            headers: getHeaders(),
+            body: JSON.stringify(petForm),
+        });
+
+        if (!response.ok) {
+            throw new Error("Failed to add pet");
+        }
+
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error("Error adding pet:", error);
         throw error;
     }
 };
